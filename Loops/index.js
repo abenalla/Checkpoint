@@ -28,8 +28,11 @@ CREATE A FUNCTION THAT ACCEPTS ONE ARGUMENT, THE NUMBER OF TIMES IT WILL CONSOLE
 */
 
 function dynamicHelloWorld(num) {
-  // CODE HERE
+  for (var i = 0; i < num; i++) {
+    console.log("#1", "hello world");
+  }
 }
+dynamicHelloWorld(3);
 
 /*
 QUESTION 2
@@ -39,8 +42,11 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
-  // CODE HERE
+  for (var i = 0; i < str.length; i++) {
+    console.log(str[i]);
+  }
 }
+logEachChar("I am a string");
 
 /*
 QUESTION 3
@@ -54,9 +60,11 @@ e.g. checkIfCharExists('hello', 'l') ===> true
 */
 
 function checkIfCharExists(str, char) {
-  // CODE HERE
+  for (var i = 0; i < str.length; i++) {
+    return str.includes(char);
+  }
 }
-
+checkIfCharExists("hello", "l");
 /*
 QUESTION 4
 
@@ -68,9 +76,11 @@ e.g. indexOf('hello', 'l') ===> 2
 */
 
 function indexOf(str, char) {
-  // CODE HERE
+  for (var i = 0; i < str.length; i++) {
+    return str.indexOf(char);
+  }
 }
-
+indexOf("hello", "l");
 /*
 QUESTION 5
 
@@ -100,8 +110,19 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
-  // CODE HERE
+  for (var i = 1; i <= num; i++) {
+    if (i === 15) {
+      console.log("FizzBuzz");
+    } else if (i % 3 == 0) {
+      console.log("Fizz");
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
 }
+fizzBuzz(15);
 
 /*
 QUESTION 6
@@ -114,9 +135,19 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(n) {
-  // CODE HERE
-}
+  var a = 0;
+  var b = 1;
+  var x;
 
+  while (n >= 0) {
+    x = a;
+    a = a + b;
+    b = x;
+    n--;
+  }
+
+  return b;
+}
 console.log(fibonacci(5));
 
 /*
