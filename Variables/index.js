@@ -92,10 +92,11 @@ i.e. + - / *
 var myAgeCalc = null;
 myAgeCalc /= 10;
 myAgeCalc *= 5;
-myAgeCalc += 10;
-    // YOUR CODE HERE
+myAgeCalc += 20;
 
-    /*
+// YOUR CODE HERE
+
+/*
 QUESTION 7 (THE LAST QUESTION)
 
 HOW MANY EXPRESSIONS ARE THERE IN THIS STATEMENT
@@ -105,10 +106,14 @@ refer to lecutre about expressions
 
 */
 
-    1 + 5
-  ) * 4;
+(1 + 5) * 4;
+
+//Literal Expression = 3
+//Arithmetic Expression = 2
+//Assignemt Expression = 1
 
 var numExpression;
+numExpression = 24;
 
 // YOUR CODE HERE
 

@@ -15,7 +15,7 @@ CREATE A FUNCTION THAT CONSOLE.LOGS hello world 3 times
 
 function helloWorld3Times() {
   for (var i = 0; i < 3; i++) {
-    console.log('hello world');
+    console.log("hello world");
   }
 }
 
@@ -127,11 +127,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run();
 
@@ -145,4 +145,4 @@ module.exports = {
   fibonacci,
 };
 
-console.log('');
+console.log("");
