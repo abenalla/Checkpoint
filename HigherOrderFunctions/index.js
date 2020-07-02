@@ -16,7 +16,7 @@ CREATE A FUNCTION THAT TAKES A CALLBACK AND INVOKES THAT CALLBACK FUNCTION
 */
 
 function higherOrder(callback) {
-  // CODE HERE
+  return callback();
 }
 
 /*
@@ -26,9 +26,7 @@ CREATE A FUNCTION ACCEPTS ONE ARGUMENT, A CALLBACK THAT RETURNS THE RETURN VALUE
 
 */
 
-function q2(callback) {
-  // CODE HERE
-}
+function q2(callback) {}
 
 /*
 QUESTION 3
@@ -67,11 +65,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run((failures) => {
   // if (failures) {
@@ -83,4 +81,4 @@ runner.run((failures) => {
 
 module.exports = { higherOrder, q2, forEach, map };
 
-console.log('');
+console.log("");
