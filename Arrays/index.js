@@ -24,6 +24,7 @@ function mutateZeroElem(anyArray) {
   anyArray[0] = 0;
   return anyArray;
 }
+mutateZeroElem([1, 2, 3]);
 
 /*
 QUESTION 1
@@ -39,9 +40,9 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 */
 
 function pushString(arr) {
-  // CODE HERE
-  console.log(arr);
+  return arr.concat(["last element"]);
 }
+pushString([1, 2, 3]);
 
 /*
 QUESTION 2
@@ -58,9 +59,9 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 */
 
 function push(array, value) {
-  // CODE HERE
+  return array.concat([true]);
 }
-
+push([1, 2, 3]);
 /*
 QUESTION 3
 
@@ -79,9 +80,11 @@ true
 
 */
 
+var elem = [1, true, "I am the third element", "my index is 3 confusing right"];
 function printElements(array) {
-  // CODE HERE
+  console.log(array);
 }
+elem.forEach(printElements);
 
 /*
 QUESTION 4
@@ -222,11 +225,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run();
 
@@ -243,4 +246,4 @@ module.exports = {
   createTwoDArray,
 };
 
-console.log('');
+console.log("");
