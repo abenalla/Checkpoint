@@ -26,7 +26,10 @@ CREATE A FUNCTION ACCEPTS ONE ARGUMENT, A CALLBACK THAT RETURNS THE RETURN VALUE
 
 */
 
-function q2(callback) {}
+function q2(callback) {
+  var result = callback();
+  return result;
+}
 
 /*
 QUESTION 3
@@ -38,7 +41,9 @@ USE A FOR-LOOP
 */
 
 function forEach(array, callback) {
-  // CODE HERE
+  for (var i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
 }
 
 /*
@@ -54,7 +59,11 @@ USE A FOR-LOOP
 */
 
 function map(array, callback) {
-  // CODE HERE
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {
+    return newArray.push(callback(array[i]));
+  }
+  return newArray;
 }
 
 /*
