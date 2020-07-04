@@ -112,8 +112,10 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
-  // CODE HERE
+  var newArray = [...new Set(array)];
+  console.log(newArray);
 }
+unique([1, 2, 3, 2, 3, 2]);
 
 /*
 QUESTION 5
